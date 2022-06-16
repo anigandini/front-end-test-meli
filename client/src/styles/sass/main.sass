@@ -1,13 +1,16 @@
 @import '/globals/_variables'
 @import '/globals/icons'
-@import '/components/search'
+@import '/components/search_bar'
+@import '/components/search_result'
 
 *
   margin: 0
+  font-family: 'Montserrat', sans-serif
 
 .app
-  background-color: $color-gray-s
-  height: 100vh
   .header
     @extend %flexbox-row
     width: 100%
+  main
+    background-color: $color-gray-s
+    height: 100%

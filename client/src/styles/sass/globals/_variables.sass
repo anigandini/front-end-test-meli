@@ -1,6 +1,7 @@
 /* BREAKPOINTS */
 $breakpoint-tablet: 768px
 $breakpoint-desktop: 1024px
+$breakpoint-large-desktop: 1440px
 
 
 /* COLORS */
@@ -11,9 +12,13 @@ $color-gray-m: #999999
 $color-gray-s: #eeeeee
 
 /* PADDINGS */
+$padding-one-col: 8.3%
 $padding-wide: 2rem
 $padding-narrow: 1rem
-$padding-content: 0 8.3% 0
+$padding-content: 0 $padding-one-col 0
+
+/*BORDER RADIUS*/
+$border-radius: 4px
 
 /* FLEX CONTAINERS */
 %flexbox-row
@@ -24,4 +29,6 @@ $padding-content: 0 8.3% 0
 
 %flexbox-column
   display: flex
-  flex-direction: row
+  flex-direction: column
+  justify-content: center
+  align-items: center

@@ -1,24 +1,31 @@
 import React from 'react'
 import "./styles/sass/main.sass"
 import SearchBar from './components/SearchBar'
+import SearchResult from './components/searchResult'
+import Icon from './components/Icon'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [data, setData] = React.useState(null)
+  const [ searchResult, setSearchResult ] = React.useState([])
+  const [ searchQuery, setSearchQuery ] = React.useState('')
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message))
-  }, [])
 
   return (
-    <div className="app">
-      <header className="header">
-        <SearchBar />
-      </header>
-        <p>{!data ? "Loading..." : data}</p>
-    </div>
-  );
+    <Router>
+      <div className="app">
+        <header className="header">
+          <SearchBar setSearchResult={setSearchResult} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        </header>
+        <main>
+            <Routes>
+              <Route path='/' />
+              <Route path='/items/:id' />
+              <Route path={`/items/search/:q`} element={<SearchResult items={searchResult}/>}/>
+            </Routes>
+          </main>
+      </div>
+    </Router>
+  )
 }
 
 export default App
