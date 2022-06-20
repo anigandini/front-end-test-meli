@@ -1,13 +1,9 @@
-// server/index.js
-const express = require("express");
-const PORT = process.env.PORT || 3001;
+let express = require('express')
+const routes = require('./routes')
 
-const app = express();
+const PORT = process.env.PORT || 3001
+const app = express()
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from Express!" });
-  });
-  
-  app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
-  });
+app.use('/static', express.static(__dirname + '/public'))
+app.use('/', routes)
+app.listen(PORT, () => {console.log(`Server listening on ${PORT}`)})
