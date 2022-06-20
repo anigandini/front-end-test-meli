@@ -1,0 +1,31 @@
+.search
+    @extend %flexbox-row
+    width: 100%
+    background-color: $color-yellow
+    padding: $padding-content
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    gap: 1rem
+    section
+        width: 100%
+        fieldset
+            @extend %flexbox-row
+            align-items: stretch
+            font-size: 1.125rem
+            border: none
+            padding: 0
+            legend
+                display: none
+            input
+                border: none
+                background-color: white
+                color: $color-gray-m
+                width: 100%
+                padding-left: $padding-narrow / 2
+                &:focus
+                    outline: none
+            button
+                @extend %flexbox-row
+                background-color: $color-gray-s
+                border: none
+                padding: $padding-narrow / 2

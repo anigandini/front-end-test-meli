@@ -1,0 +1,19 @@
+.breadcrumbs
+  ol
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      display: flex
+      justify-content: flex-start
+      align-items: baseline
+      list-style: none
+      padding: 0
+      padding-bottom: $padding-narrow
+      li
+        font-size: $font-xs
+        padding-right: $padding-narrow / 2
+        color: $color-gray-m
+        &:not(:last-child)::after
+          content: '>'
+          padding-left: $padding-narrow / 2
+        &:last-child
+          font-weight: bold 

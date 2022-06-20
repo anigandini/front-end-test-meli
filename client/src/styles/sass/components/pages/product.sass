@@ -1,0 +1,55 @@
+.product
+    @extend %flexbox-column
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    background-color: white
+    padding: $padding-wide
+    @media (min-width: $breakpoint-tablet)
+        flex-direction: row
+    img
+        width: 100%
+        height: 100%
+        border-radius: $border-radius
+        @media (min-width: $breakpoint-tablet)
+            width: $padding-one-col * 7 
+            height: $padding-one-col * 7
+    aside
+        div
+            span
+                font-size: $font-xs
+        h1
+            padding-top: $padding-narrow
+            padding-bottom: $padding-wide
+            font-size: $font-m
+        h2
+            @extend %flexbox-row
+            justify-content: flex-start
+            align-items: flex-start
+            font-size: $font-xl
+            padding-bottom: $padding-wide
+            .decimals
+                font-size: $font-xl / 2
+                line-height: 1.9
+        button
+            background-color: $color-blue
+            color: white 
+            border: none
+            border-radius: $border-radius
+            width: 100%
+            padding: $padding-content
+            padding-top: $padding-narrow /2
+            padding-bottom: $padding-narrow /2
+            &:hover
+                opacity: 0.5
+        @media (min-width: $breakpoint-tablet)
+            width: $padding-one-col * 3
+    footer
+        h3
+            font-size: $font-l
+            padding-bottom: $padding-wide
+            padding-top: $padding-wide
+        p
+            font-size: $font-s
+        @media (min-width: $breakpoint-tablet)
+            width: $padding-one-col * 7

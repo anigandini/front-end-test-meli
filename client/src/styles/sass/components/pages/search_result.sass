@@ -1,0 +1,34 @@
+.result
+    ul
+        @extend %flexbox-column
+        background: white
+        padding: 0
+        border-radius: $border-radius
+        li
+            @extend %flexbox-row
+            align-items: flex-start
+            width: 100%
+            justify-content: flex-start
+            border-bottom: 1px solid $color-gray-s
+            header
+                img
+                    width: 11.25rem
+                    height: 11.25rem
+                    padding: $padding-narrow
+                    border-radius: $border-radius
+                    object-fit: contain
+            article
+                @extend %flexbox-column
+                padding-top: $padding-narrow * 2
+                align-items: flex-start
+                gap: $padding-wide
+                max-width: 40%
+                div
+                    @extend %flexbox-row
+                    gap: 0.5rem
+                    p
+                        max-width: 80%
+                        font-size: $font-s
+
+
+
