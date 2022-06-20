@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/app.ts"
+    "start": "nodemon server/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.40"
+    "@types/node": "^17.0.42"
   }
 }
