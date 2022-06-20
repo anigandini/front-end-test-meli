@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext" //"module": "ESNext" for tsc, webpack
+    },
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    }
+}
