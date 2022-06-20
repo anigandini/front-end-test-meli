@@ -14,10 +14,18 @@ Aplicación web que permite buscar artículos del catálogo de Mercado Libre.
 
 Clonar el repositorio
 
+Iniciar express
+
 ```bash
   npm install
   npm start
+```
+
+Iniciar la app de react
+
+```bash
   cd client
+  npm install
   npm start
 ```
 
